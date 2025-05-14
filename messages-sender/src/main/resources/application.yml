@@ -6,8 +6,8 @@ spring:
     password: admin
     virtual-host: /
   mail:
-    host: smtp.example.com
-    port: 587
+    host: mailhog
+    port: 1025
     username: "test@example.com"
     password: "password"
     properties:

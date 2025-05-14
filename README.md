@@ -23,6 +23,7 @@ Aplikacja korzysta z następujących technologii i komponentów:
 - **Spring Boot** - główny framework aplikacji.
 - **Spring AMQP** - moduł Spring do integracji z RabbitMQ, używany do obsługi asynchronicznej komunikacji między usługami.
 - **RabbitMQ** - broker wiadomości używany do obsługi kolejek komunikatów związanych z wiadomościami.
+- **MailHog** - narzędzie do testowania poczty e-mail, które działa jako serwer SMTP.
 
 ## Uruchomienie aplikacji
 
@@ -42,8 +43,10 @@ Poniżej znajduje się lista adresów, pod jakimi dostępne są poszczególne ko
 |--------------------------------------|---------------------------------------------------|
 | Interfejs webowy RabbitMQ Management | [http://localhost:15672](http://localhost:15672)  |
 | RabbitMQ (połączenia AMQP)           | [http://localhost:5672](http://localhost:5672)    |
+| Interfejs webowy MailHog             | [http://localhost:8025](http://localhost:8025)    |
+| MailHog (połączenia SMTP)            | [http://localhost:1025](http://localhost:1025)    |
 
-Przykładowe zapytanie REST do wyłania wiadomości:
+Przykładowe zapytanie REST do wysyłania wiadomości:
 
 ```json
 {

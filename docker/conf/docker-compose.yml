@@ -12,6 +12,7 @@ services:
       - "8080:8080"
     depends_on:
       - rabbitmq
+      - mailhog
 
   rabbitmq:
     image: rabbitmq:management
@@ -26,6 +27,16 @@ services:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - simple-messaging-gateway-network
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: mailhog
+    restart: always
+    networks:
+      - simple-messaging-gateway-network
+    ports:
+      - 1025:1025
+      - 8025:8025
 
 volumes:
   rabbitmq_data:
